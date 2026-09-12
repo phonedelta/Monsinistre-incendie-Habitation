@@ -3,39 +3,52 @@ import CTAButton from './CTAButton'
 
 export default function HeroSection() {
   return (
-    <section id="accueil" className="relative overflow-hidden bg-mesh-warm">
-      <div className="page-container grid items-center gap-10 py-12 sm:gap-12 sm:py-16 lg:min-h-[100svh] lg:grid-cols-2 lg:gap-14 lg:py-20">
-        <div className="mx-auto w-full max-w-xl text-center lg:mx-0 lg:text-left">
-          <h1 className="hero-enter font-display text-[1.7rem] font-extrabold leading-[1.12] tracking-tight text-charcoal text-balance sm:text-4xl md:text-5xl lg:text-[3.15rem]">
+    <section
+      id="accueil"
+      className="relative min-h-[100svh] overflow-hidden"
+    >
+      <img
+        src={images.hero}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full scale-105 object-cover object-center"
+        loading="eager"
+        decoding="async"
+      />
+
+      <div
+        className="absolute inset-0 bg-gradient-to-r from-charcoal/88 via-charcoal/72 to-charcoal/45"
+        aria-hidden="true"
+      />
+      <div
+        className="absolute inset-0 bg-gradient-to-t from-charcoal/55 via-transparent to-charcoal/20"
+        aria-hidden="true"
+      />
+      <div
+        className="absolute -left-20 bottom-0 h-72 w-72 rounded-full bg-copper/20 blur-3xl"
+        aria-hidden="true"
+      />
+
+      <div className="page-container relative z-10 pt-20 sm:pt-24 lg:pt-28">
+        <div className="max-w-2xl text-left">
+          <h1 className="hero-enter font-display text-[1.65rem] font-extrabold leading-[1.15] tracking-tight text-white text-balance sm:text-3xl md:text-4xl lg:text-[2.75rem]">
             Votre habitation a subi un incendie&nbsp;? Ne gérez pas seul votre dossier
             d’assurance
           </h1>
 
-          <p className="hero-enter hero-enter-delay-1 mx-auto mt-5 max-w-lg text-sm leading-relaxed text-muted-warm text-pretty sm:text-base lg:mx-0">
+          <p className="hero-enter hero-enter-delay-1 mt-4 max-w-xl text-sm leading-relaxed text-white/80 text-pretty sm:text-[15px] lg:text-base">
             Si votre logement est assuré et que votre dossier est toujours en cours,
             Monsinistre vous accompagne dans l’évaluation des dommages et la défense de
             votre indemnisation
           </p>
 
-          <div className="hero-enter hero-enter-delay-2 mt-7 flex justify-center lg:justify-start">
-            <CTAButton size="lg" className="w-full max-w-md sm:w-auto">
+          <div className="hero-enter hero-enter-delay-2 mt-8 flex justify-start">
+            <CTAButton
+              size="lg"
+              className="w-full max-w-md sm:w-auto focus-visible:ring-offset-charcoal"
+            >
               Faire analyser mon dossier incendie
             </CTAButton>
-          </div>
-        </div>
-
-        <div className="hero-media-enter relative mx-auto w-full max-w-[420px] lg:max-w-[480px] lg:justify-self-end">
-          <div className="animate-pulse-ring absolute -inset-3 rounded-[2rem] bg-copper/5 blur-2xl" aria-hidden="true" />
-          <div className="img-zoom relative overflow-hidden rounded-[1.75rem] border border-line/80 shadow-[0_28px_60px_-36px_rgba(28,25,23,0.45)]">
-            <img
-              src={images.hero}
-              alt="Habitation résidentielle moderne"
-              width={960}
-              height={960}
-              className="aspect-square w-full object-cover object-center"
-              loading="eager"
-              decoding="async"
-            />
           </div>
         </div>
       </div>

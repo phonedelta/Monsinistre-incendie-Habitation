@@ -12,6 +12,13 @@ const iconMap = {
   installations: Zap,
 }
 
+function cardColClass(index) {
+  // Desktop: 3 cards on top, 2 centered below
+  if (index < 3) return 'lg:col-span-2'
+  if (index === 3) return 'sm:col-span-1 lg:col-span-2 lg:col-start-2'
+  return 'sm:col-span-1 lg:col-span-2 lg:col-start-4'
+}
+
 export default function DamageSourcesSection() {
   return (
     <section id="dommages" className="section-pad section-anchor overflow-hidden bg-mist">
@@ -33,19 +40,16 @@ export default function DamageSourcesSection() {
             aria-hidden="true"
           />
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-6 lg:gap-5">
             {damageSources.map((source, index) => {
               const Icon = iconMap[source.id]
-              const centerOffset =
-                index === 4
-                  ? 'sm:col-span-2 sm:mx-auto sm:max-w-md lg:col-span-1 lg:col-start-2 lg:mx-0 lg:max-w-none'
-                  : ''
 
               return (
                 <AnimatedCard
                   key={source.id}
                   delay={index * 80}
-                  className={`group relative overflow-hidden ${centerOffset}`}
+                  wrapperClassName={cardColClass(index)}
+                  className="group relative overflow-hidden"
                 >
                   <div className="flex items-center gap-3">
                     <span className="icon-soft flex size-11 items-center justify-center rounded-2xl bg-ember-soft text-copper group-hover:bg-copper group-hover:text-white group-hover:shadow-[0_10px_24px_-14px_rgba(166,93,58,0.7)]">

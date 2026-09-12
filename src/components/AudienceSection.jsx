@@ -22,28 +22,30 @@ export default function AudienceSection() {
                 delay={index * 90}
                 variant="scale"
                 as="article"
-                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-surface shadow-[0_8px_28px_-24px_rgba(28,25,23,0.3)] transition-all duration-300 hover:-translate-y-1.5 hover:border-copper/20 hover:shadow-[0_18px_40px_-28px_rgba(28,25,23,0.35)]"
+                className="h-full"
               >
-                <div className="img-zoom overflow-hidden">
-                  <img
-                    src={profile.image}
-                    alt=""
-                    aria-hidden="true"
-                    className="aspect-[4/3] w-full object-cover"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
-                <div className="flex flex-1 flex-col p-5">
-                  <div className="flex items-center gap-3">
-                    <span className="icon-soft flex size-10 items-center justify-center rounded-2xl bg-ember-soft text-copper group-hover:bg-copper group-hover:text-white">
-                      <Icon className="animate-icon-bob size-5" aria-hidden="true" />
-                    </span>
-                    <h3 className="font-display text-lg font-extrabold tracking-tight text-charcoal">
-                      {profile.title}
-                    </h3>
+                <div className="card-lift group flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-surface shadow-[0_8px_28px_-24px_rgba(28,25,23,0.3)] hover:border-copper/20 hover:shadow-[0_18px_40px_-28px_rgba(28,25,23,0.35)]">
+                  <div className="img-zoom overflow-hidden">
+                    <img
+                      src={profile.image}
+                      alt=""
+                      aria-hidden="true"
+                      className="aspect-[4/3] w-full object-cover"
+                      loading="lazy"
+                      decoding="async"
+                    />
                   </div>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-warm">{profile.text}</p>
+                  <div className="flex flex-1 flex-col p-5">
+                    <div className="flex items-center gap-3">
+                      <span className="icon-soft flex size-10 items-center justify-center rounded-2xl bg-ember-soft text-copper group-hover:bg-copper group-hover:text-white">
+                        <Icon className="animate-icon-bob size-5" aria-hidden="true" />
+                      </span>
+                      <h3 className="font-display text-lg font-extrabold tracking-tight text-charcoal">
+                        {profile.title}
+                      </h3>
+                    </div>
+                    <p className="mt-3 text-sm leading-relaxed text-muted-warm">{profile.text}</p>
+                  </div>
                 </div>
               </AnimatedSection>
             )

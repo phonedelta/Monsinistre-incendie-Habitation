@@ -43,12 +43,14 @@ export default function AnimatedSection({
   }, [])
 
   const revealClass = VARIANT_CLASS[variant] || VARIANT_CLASS.up
+  const baseDelay = 120
+  const totalDelay = baseDelay + delay
 
   return (
     <Tag
       ref={ref}
       className={`${revealClass} ${visible ? 'is-visible' : ''} ${className}`}
-      style={delay ? { transitionDelay: `${delay}ms` } : undefined}
+      style={{ transitionDelay: `${totalDelay}ms` }}
     >
       {children}
     </Tag>
