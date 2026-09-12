@@ -5,7 +5,7 @@ export default function HeroSection() {
   return (
     <section
       id="accueil"
-      className="relative min-h-[100svh] overflow-hidden"
+      className="relative min-h-[calc(100svh-78px)] overflow-hidden"
     >
       <img
         src={images.hero}
@@ -29,7 +29,7 @@ export default function HeroSection() {
         aria-hidden="true"
       />
 
-      <div className="page-container relative z-10 pt-20 sm:pt-24 lg:pt-28">
+      <div className="page-container relative z-10 flex min-h-[calc(100svh-78px)] items-center pt-20 pb-10 sm:pt-24 sm:pb-12 lg:pt-28 lg:pb-16">
         <div className="max-w-2xl text-left">
           <h1 className="hero-enter font-display text-[1.65rem] font-extrabold leading-[1.15] tracking-tight text-white text-balance sm:text-3xl md:text-4xl lg:text-[2.75rem]">
             Votre habitation a subi un incendie&nbsp;? Ne gérez pas seul votre dossier
