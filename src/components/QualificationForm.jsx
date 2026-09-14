@@ -50,7 +50,7 @@ function FieldLabel({ htmlFor, children, required }) {
     <label htmlFor={htmlFor} className="mb-3 block text-sm font-semibold text-charcoal">
       {children}
       {required ? (
-        <span className="ml-1 text-copper" aria-hidden="true">
+        <span className="ml-1 text-mint-text" aria-hidden="true">
           *
         </span>
       ) : null}
@@ -62,8 +62,8 @@ function TextInput({ id, error, ...props }) {
   return (
     <input
       id={id}
-      className={`w-full min-w-0 rounded-xl border bg-ivory/60 px-3.5 py-3.5 text-[15px] text-charcoal outline-none transition-all duration-200 placeholder:text-muted-warm/55 hover:border-copper/25 focus:border-copper focus:bg-white focus:ring-4 focus:ring-copper/10 sm:px-4 ${
-        error ? 'border-red-600' : 'border-line'
+      className={`w-full min-w-0 rounded-xl border bg-white px-3.5 py-3.5 text-[15px] text-charcoal outline-none transition-all duration-200 placeholder:text-muted-warm/55 hover:border-primary-hover focus:border-primary-dark focus:bg-white focus:ring-4 focus:ring-[rgb(127_214_202_/20%)] sm:px-4 ${
+        error ? 'border-error' : 'border-[#d8e7e5]'
       }`}
       {...props}
     />
@@ -215,7 +215,7 @@ export default function QualificationForm() {
         <AnimatedSection delay={100} className="mt-8 sm:mt-10">
           {submitted ? (
             <div
-              className="success-enter rounded-[1.75rem] border border-copper/20 bg-surface p-8 text-center shadow-[0_18px_50px_-34px_rgba(28,25,23,0.35)]"
+              className="success-enter rounded-[1.75rem] border border-primary-dark/25 bg-surface p-8 text-center shadow-[0_18px_50px_-34px_rgba(31,51,52,0.35)]"
               role="status"
             >
               <p className="font-display text-2xl font-extrabold text-charcoal">
@@ -225,7 +225,7 @@ export default function QualificationForm() {
           ) : (
             <form
               onSubmit={handleSubmit}
-              className="rounded-[1.75rem] border border-line bg-surface p-5 shadow-[0_18px_50px_-34px_rgba(28,25,23,0.35)] transition-shadow duration-300 hover:shadow-[0_22px_56px_-34px_rgba(28,25,23,0.4)] sm:p-8"
+              className="rounded-[1.75rem] border border-line bg-surface p-5 shadow-[0_18px_50px_-34px_rgba(31,51,52,0.35)] transition-shadow duration-300 hover:shadow-[0_22px_56px_-34px_rgba(31,51,52,0.4)] sm:p-8"
               noValidate
             >
               <FormProgress current={step} total={TOTAL_STEPS} />
@@ -238,7 +238,7 @@ export default function QualificationForm() {
                   <legend className="font-display mb-5 text-lg font-extrabold tracking-tight text-charcoal sm:text-xl">
                     {stepTitle}
                     {[1, 2, 3, 4, 5, 6, 8].includes(step) ? (
-                      <span className="ml-1 text-copper" aria-hidden="true">
+                      <span className="ml-1 text-mint-text" aria-hidden="true">
                         *
                       </span>
                     ) : null}
@@ -251,7 +251,7 @@ export default function QualificationForm() {
                       {renderOptions(yesNoUnknown, 'insured', 'insured')}
                       {form.insured === 'Non' ? (
                         <p
-                          className="step-enter-forward rounded-2xl border border-copper/20 bg-ember-soft/70 px-4 py-3 text-sm leading-relaxed text-slate-warm"
+                          className="step-enter-forward rounded-2xl border border-primary-dark/25 bg-beige px-4 py-3 text-sm leading-relaxed text-slate-warm"
                           role="status"
                         >
                           Cette prestation concerne prioritairement les dossiers assurés.
@@ -337,7 +337,7 @@ export default function QualificationForm() {
               </div>
 
               {error ? (
-                <p id="form-error" className="mt-4 text-sm font-medium text-red-700" role="alert">
+                <p id="form-error" className="mt-4 text-sm font-medium text-error" role="alert">
                   {error}
                 </p>
               ) : null}
@@ -347,7 +347,7 @@ export default function QualificationForm() {
                   <button
                     type="button"
                     onClick={goBack}
-                    className="nav-btn inline-flex min-h-11 items-center justify-center rounded-xl border border-line bg-white px-4 py-2.5 text-sm font-semibold text-charcoal hover:border-copper/25 hover:bg-beige/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-copper focus-visible:ring-offset-2"
+                    className="nav-btn inline-flex min-h-11 items-center justify-center rounded-xl border border-line bg-white px-4 py-2.5 text-sm font-semibold text-charcoal hover:border-primary-hover hover:bg-beige focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(127_214_202_/45%)] focus-visible:ring-offset-2"
                   >
                     Retour
                   </button>
@@ -359,7 +359,7 @@ export default function QualificationForm() {
                   <button
                     type="button"
                     onClick={goNext}
-                    className="nav-btn inline-flex min-h-11 w-full items-center justify-center rounded-xl bg-charcoal px-5 py-2.5 text-sm font-semibold text-white hover:bg-slate-warm hover:shadow-[0_10px_24px_-14px_rgba(28,25,23,0.45)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-copper focus-visible:ring-offset-2 sm:w-auto"
+                    className="nav-btn inline-flex min-h-11 w-full items-center justify-center rounded-xl bg-primary-dark px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#4a8283] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(127_214_202_/45%)] focus-visible:ring-offset-2 sm:w-auto"
                   >
                     Continuer
                   </button>

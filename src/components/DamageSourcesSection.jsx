@@ -32,11 +32,11 @@ export default function DamageSourcesSection() {
 
         <div className="relative mx-auto mt-12 max-w-5xl sm:mt-14">
           <div
-            className="pointer-events-none absolute left-1/2 top-1/2 hidden size-40 -translate-x-1/2 -translate-y-1/2 rounded-full border border-copper/15 bg-ember-soft/40 lg:block"
+            className="pointer-events-none absolute left-1/2 top-1/2 hidden size-40 -translate-x-1/2 -translate-y-1/2 rounded-full border border-mint-border/40 bg-beige/40 lg:block"
             aria-hidden="true"
           />
           <div
-            className="animate-pulse-ring pointer-events-none absolute left-1/2 top-1/2 hidden size-24 -translate-x-1/2 -translate-y-1/2 rounded-full bg-copper/10 lg:block"
+            className="animate-pulse-ring pointer-events-none absolute left-1/2 top-1/2 hidden size-24 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/15 lg:block"
             aria-hidden="true"
           />
 
@@ -52,7 +52,7 @@ export default function DamageSourcesSection() {
                   className="group relative overflow-hidden"
                 >
                   <div className="flex items-center gap-3">
-                    <span className="icon-soft flex size-11 items-center justify-center rounded-2xl bg-ember-soft text-copper group-hover:bg-copper group-hover:text-white group-hover:shadow-[0_10px_24px_-14px_rgba(166,93,58,0.7)]">
+                    <span className="icon-soft flex size-11 items-center justify-center rounded-2xl bg-beige text-mint-text group-hover:bg-primary-dark group-hover:text-white group-hover:shadow-[0_10px_24px_-14px_rgba(86,154,155,0.45)]">
                       <Icon className="animate-icon-bob size-5" aria-hidden="true" />
                     </span>
                     <h3 className="font-display text-lg font-extrabold tracking-tight text-charcoal">

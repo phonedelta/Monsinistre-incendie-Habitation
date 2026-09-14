@@ -24,7 +24,7 @@ export default function AudienceSection() {
                 as="article"
                 className="h-full"
               >
-                <div className="card-lift group flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-surface shadow-[0_8px_28px_-24px_rgba(28,25,23,0.3)] hover:border-copper/20 hover:shadow-[0_18px_40px_-28px_rgba(28,25,23,0.35)]">
+                <div className="card-lift group flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-surface shadow-[0_8px_28px_-24px_rgba(31,51,52,0.3)] hover:border-primary-hover hover:shadow-[0_18px_40px_-28px_rgba(31,51,52,0.35)]">
                   <div className="img-zoom overflow-hidden">
                     <img
                       src={profile.image}
@@ -37,7 +37,7 @@ export default function AudienceSection() {
                   </div>
                   <div className="flex flex-1 flex-col p-5">
                     <div className="flex items-center gap-3">
-                      <span className="icon-soft flex size-10 items-center justify-center rounded-2xl bg-ember-soft text-copper group-hover:bg-copper group-hover:text-white">
+                      <span className="icon-soft flex size-10 items-center justify-center rounded-2xl bg-beige text-mint-text group-hover:bg-primary-dark group-hover:text-white">
                         <Icon className="animate-icon-bob size-5" aria-hidden="true" />
                       </span>
                       <h3 className="font-display text-lg font-extrabold tracking-tight text-charcoal">
@@ -55,7 +55,7 @@ export default function AudienceSection() {
         <AnimatedSection
           delay={160}
           variant="scale"
-          className="mx-auto mt-8 max-w-3xl rounded-[1.5rem] border border-copper/25 bg-ember-soft/70 p-5 transition-shadow duration-300 hover:shadow-[0_16px_36px_-24px_rgba(166,93,58,0.35)] sm:mt-10 sm:p-7"
+          className="mx-auto mt-8 max-w-3xl rounded-[1.5rem] border border-primary-dark/30 bg-beige p-5 transition-shadow duration-300 hover:shadow-[0_16px_36px_-24px_rgba(86,154,155,0.35)] sm:mt-10 sm:p-7"
         >
           <h3 className="font-display text-lg font-extrabold tracking-tight text-charcoal sm:text-xl">
             Condition essentielle

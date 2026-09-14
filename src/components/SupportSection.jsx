@@ -31,7 +31,7 @@ export default function SupportSection() {
           </div>
 
           <AnimatedSection variant="right" delay={100}>
-            <div className="overflow-hidden rounded-[1.75rem] border border-line bg-surface shadow-[0_22px_50px_-36px_rgba(28,25,23,0.4)] transition-shadow duration-500 hover:shadow-[0_28px_56px_-32px_rgba(28,25,23,0.5)]">
+            <div className="overflow-hidden rounded-[1.75rem] border border-line bg-surface shadow-[0_22px_50px_-36px_rgba(31,51,52,0.4)] transition-shadow duration-500 hover:shadow-[0_28px_56px_-32px_rgba(31,51,52,0.5)]">
               <div className="img-zoom">
                 <img
                   src={images.expertise}
@@ -44,7 +44,7 @@ export default function SupportSection() {
                 />
               </div>
               <div className="grid grid-cols-2 gap-px border-t border-line bg-line">
-                <div className="bg-beige/70 px-4 py-4 transition-colors duration-300 hover:bg-ember-soft/60">
+                <div className="bg-beige/70 px-4 py-4 transition-colors duration-300 hover:bg-beige">
                   <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-muted-warm">
                     Conséquences
                   </p>

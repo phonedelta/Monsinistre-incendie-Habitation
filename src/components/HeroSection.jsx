@@ -25,7 +25,7 @@ export default function HeroSection() {
         aria-hidden="true"
       />
       <div
-        className="absolute -left-20 bottom-0 h-72 w-72 rounded-full bg-copper/20 blur-3xl"
+        className="absolute -left-20 bottom-0 h-72 w-72 rounded-full bg-primary/20 blur-3xl"
         aria-hidden="true"
       />
 
@@ -45,7 +45,7 @@ export default function HeroSection() {
           <div className="hero-enter hero-enter-delay-2 mt-8 flex justify-start">
             <CTAButton
               size="lg"
-              className="w-full max-w-md sm:w-auto focus-visible:ring-offset-charcoal"
+              className="w-full max-w-md sm:w-auto focus-visible:ring-offset-transparent"
             >
               Faire analyser mon dossier incendie
             </CTAButton>

@@ -19,7 +19,7 @@ export default function PrinciplesSection() {
             const Icon = icons[index]
             return (
               <AnimatedCard key={item.title} delay={index * 90} className="group h-full">
-                <span className="icon-soft flex size-11 items-center justify-center rounded-2xl bg-ember-soft text-copper group-hover:bg-copper group-hover:text-white">
+                <span className="icon-soft flex size-11 items-center justify-center rounded-2xl bg-beige text-mint-text group-hover:bg-primary-dark group-hover:text-white">
                   <Icon className="animate-icon-bob size-5" aria-hidden="true" />
                 </span>
                 <h3 className="font-display mt-5 text-base font-extrabold leading-snug tracking-tight text-charcoal sm:text-[1.05rem]">

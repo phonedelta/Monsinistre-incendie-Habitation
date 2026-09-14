@@ -16,7 +16,7 @@ export default function SectionHeader({
           className={`mb-3 inline-flex items-center rounded-full border px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.08em] ${
             light
               ? 'border-white/20 bg-white/10 text-white/80'
-              : 'border-copper/15 bg-ember-soft/80 text-copper'
+              : 'border-mint-border bg-[rgb(148_203_194_/18%)] text-mint-text'
           }`}
         >
           {eyebrow}

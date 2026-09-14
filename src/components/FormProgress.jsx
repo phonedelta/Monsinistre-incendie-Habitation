@@ -10,14 +10,14 @@ export default function FormProgress({ current, total }) {
         <span className="tabular-nums transition-all duration-300">{percent}%</span>
       </div>
       <div
-        className="h-1.5 overflow-hidden rounded-full bg-sand"
+        className="h-1.5 overflow-hidden rounded-full bg-beige"
         role="progressbar"
         aria-valuenow={percent}
         aria-valuemin={0}
         aria-valuemax={100}
       >
         <div
-          className={`h-full rounded-full bg-copper transition-all duration-500 ease-out ${
+          className={`h-full rounded-full bg-primary-dark transition-all duration-500 ease-out ${
             percent > 0 ? 'progress-glow' : ''
           }`}
           style={{ width: `${percent}%` }}

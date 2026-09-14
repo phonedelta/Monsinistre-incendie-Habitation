@@ -22,13 +22,13 @@ export default function CTAButton({
 
   const variants = {
     primary:
-      'bg-copper text-white shadow-[0_10px_28px_-14px_rgba(166,93,58,0.55)] hover:bg-copper-dark hover:-translate-y-0.5 hover:shadow-[0_14px_32px_-12px_rgba(166,93,58,0.6)] focus-visible:ring-copper active:translate-y-0 active:scale-[0.98]',
+      'bg-primary text-btn-text shadow-[0_8px_20px_rgb(86_154_155_/18%)] hover:bg-primary-hover hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgb(86_154_155_/24%)] focus-visible:ring-[rgb(127_214_202_/45%)] active:bg-primary-dark active:text-white active:translate-y-0 active:scale-[0.98]',
     secondary:
-      'bg-white text-charcoal border border-line hover:border-copper/30 hover:bg-ember-soft/50 hover:-translate-y-0.5 focus-visible:ring-copper',
+      'bg-white text-charcoal border border-line hover:border-primary-hover hover:bg-beige hover:-translate-y-0.5 focus-visible:ring-[rgb(127_214_202_/45%)]',
     ghost:
-      'bg-transparent text-charcoal border border-line hover:border-copper/25 hover:bg-white focus-visible:ring-copper',
+      'bg-transparent text-charcoal border border-line hover:border-primary-hover hover:bg-white focus-visible:ring-[rgb(127_214_202_/45%)]',
     light:
-      'bg-white text-charcoal shadow-md hover:bg-ivory hover:-translate-y-0.5 hover:shadow-lg focus-visible:ring-white active:translate-y-0',
+      'bg-primary text-btn-text shadow-md hover:bg-primary-hover hover:-translate-y-0.5 hover:shadow-lg focus-visible:ring-white active:bg-primary-dark active:text-white active:translate-y-0',
   }
 
   const handleClick = (event) => {

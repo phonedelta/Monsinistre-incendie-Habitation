@@ -15,7 +15,7 @@ export default function AnimatedCard({
       className={`h-full ${wrapperClassName}`}
     >
       <div
-        className={`card-lift h-full rounded-2xl border border-line bg-surface p-5 hover:border-copper/20 hover:shadow-[0_18px_40px_-28px_rgba(28,25,23,0.35)] sm:p-6 ${className}`}
+        className={`card-lift h-full rounded-2xl border border-line bg-surface p-5 hover:border-primary-hover hover:shadow-[0_18px_40px_-28px_rgba(31,51,52,0.35)] sm:p-6 ${className}`}
       >
         {children}
       </div>

@@ -15,7 +15,7 @@ export default function ComparisonSection() {
         <div className="mt-10 grid gap-5 lg:mt-14 lg:grid-cols-2 lg:gap-6">
           <AnimatedSection
             variant="left"
-            className="rounded-[1.75rem] border border-line bg-surface p-6 transition-shadow duration-300 hover:shadow-[0_16px_40px_-30px_rgba(28,25,23,0.35)] sm:p-8"
+            className="rounded-[1.75rem] border border-line bg-surface p-6 transition-shadow duration-300 hover:shadow-[0_16px_40px_-30px_rgba(31,51,52,0.35)] sm:p-8"
           >
             <h3 className="font-display text-xl font-extrabold tracking-tight text-charcoal">
               Sans analyse approfondie
@@ -41,7 +41,7 @@ export default function ComparisonSection() {
           <AnimatedSection
             variant="right"
             delay={100}
-            className="rounded-[1.75rem] border border-copper/25 bg-gradient-to-br from-beige to-ember-soft/70 p-6 shadow-[0_20px_50px_-34px_rgba(166,93,58,0.45)] transition-shadow duration-300 hover:shadow-[0_24px_56px_-30px_rgba(166,93,58,0.55)] sm:p-8"
+            className="rounded-[1.75rem] border border-primary-dark/30 bg-gradient-to-br from-sand to-beige p-6 shadow-[0_20px_50px_-34px_rgba(86,154,155,0.45)] transition-shadow duration-300 hover:shadow-[0_24px_56px_-30px_rgba(86,154,155,0.55)] sm:p-8"
           >
             <h3 className="font-display text-xl font-extrabold tracking-tight text-charcoal">
               Avec Monsinistre
@@ -52,7 +52,7 @@ export default function ComparisonSection() {
                   key={item}
                   className="flex items-start gap-3 transition-transform duration-300 hover:translate-x-0.5"
                 >
-                  <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-copper text-white">
+                  <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-primary-dark text-white">
                     <Check className="size-3.5" strokeWidth={3} aria-hidden="true" />
                   </span>
                   <span className="text-sm leading-relaxed text-slate-warm sm:text-[15px]">

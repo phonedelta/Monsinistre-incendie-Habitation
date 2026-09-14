@@ -5,20 +5,55 @@
   --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
   --font-display: 'Manrope', ui-sans-serif, system-ui, sans-serif;
 
-  --color-ivory: #f7f4ef;
-  --color-sand: #ebe4da;
-  --color-beige: #f3ebe3;
-  --color-mist: #f5f2ed;
-  --color-copper: #a65d3a;
-  --color-copper-dark: #8a4c2f;
-  --color-terracotta: #b56a45;
-  --color-ember: #c45c26;
-  --color-ember-soft: #f4e8dc;
-  --color-charcoal: #1c1917;
-  --color-slate-warm: #3f3a36;
-  --color-muted-warm: #6b645c;
-  --color-line: #e4ddd4;
+  /* Palette Monsinistre Expertise préalable (turquoise / mint) */
+  --color-primary: #7fd6ca;
+  --color-primary-hover: #71bcb2;
+  --color-primary-dark: #569a9b;
+  --color-accent: #b8ded8;
+  --color-mint-border: #94cbc2;
+  --color-mint-text: #4a9696;
+  --color-mint-text-2: #5a9696;
+  --color-btn-text: #1f3f40;
+  --color-selected: #356f70;
+  --color-error: #b42318;
+
+  /* Alias utilisés par les composants existants */
+  --color-ivory: #ffffff;
+  --color-sand: #f5fbfa;
+  --color-beige: #eaf7f5;
+  --color-mist: #f5fbfa;
+  --color-copper: #7fd6ca;
+  --color-copper-dark: #71bcb2;
+  --color-terracotta: #71bcb2;
+  --color-ember: #569a9b;
+  --color-ember-soft: #eaf7f5;
+  --color-charcoal: #1f3334;
+  --color-slate-warm: #1f3334;
+  --color-muted-warm: #667879;
+  --color-line: #cfe9e5;
   --color-surface: #ffffff;
+}
+
+:root {
+  --primary: #7fd6ca;
+  --primary-hover: #71bcb2;
+  --primary-mid: #71bcb2;
+  --primary-dark: #569a9b;
+  --accent: #b8ded8;
+  --mint-border: #94cbc2;
+  --mint-text: #4a9696;
+  --mint-text-2: #5a9696;
+  --btn-text: #1f3f40;
+  --bg: #ffffff;
+  --bg-soft: #f5fbfa;
+  --bg-tint: #eaf7f5;
+  --text: #1f3334;
+  --muted: #667879;
+  --border: #cfe9e5;
+  --error: #b42318;
+  --shadow-sm: 0 1px 2px rgb(31 36 48 / 4%), 0 1px 3px rgb(31 36 48 / 6%);
+  --shadow-md: 0 8px 24px rgb(31 36 48 / 6%);
+  --shadow-lg: 0 18px 48px rgb(127 214 202 / 16%);
 }
 
 @layer base {
@@ -51,8 +86,8 @@
     min-width: 320px;
     overflow-x: hidden;
     font-family: var(--font-sans);
-    color: var(--color-slate-warm);
-    background: var(--color-ivory);
+    color: var(--text);
+    background: var(--bg);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -72,8 +107,8 @@
   }
 
   ::selection {
-    background: color-mix(in srgb, var(--color-copper) 18%, white);
-    color: var(--color-charcoal);
+    background: #7fd6ca;
+    color: #1f3f40;
   }
 
   button,
@@ -217,16 +252,20 @@
 
   .bg-mesh-warm {
     background:
-      radial-gradient(ellipse 80% 55% at 6% 0%, rgba(166, 93, 58, 0.07), transparent 55%),
-      radial-gradient(ellipse 55% 40% at 96% 8%, rgba(196, 92, 38, 0.05), transparent 50%),
-      var(--color-ivory);
+      radial-gradient(ellipse 80% 55% at 6% 0%, rgba(127, 214, 202, 0.14), transparent 55%),
+      radial-gradient(ellipse 55% 40% at 96% 8%, rgba(184, 222, 216, 0.22), transparent 50%),
+      var(--bg);
   }
 
   .bg-mesh-urgency {
     background:
-      radial-gradient(ellipse 70% 50% at 12% 20%, rgba(166, 93, 58, 0.14), transparent 55%),
-      radial-gradient(ellipse 55% 40% at 92% 80%, rgba(140, 76, 47, 0.16), transparent 50%),
-      var(--color-charcoal);
+      radial-gradient(ellipse 70% 50% at 12% 20%, rgba(127, 214, 202, 0.16), transparent 55%),
+      radial-gradient(ellipse 55% 40% at 92% 80%, rgba(86, 154, 155, 0.2), transparent 50%),
+      #1f3334;
+  }
+
+  .progress-glow {
+    box-shadow: 0 0 12px rgba(86, 154, 155, 0.35);
   }
 
   .reveal-up,
@@ -342,10 +381,6 @@
 
   .is-visible .timeline-line {
     transform: scaleY(1);
-  }
-
-  .progress-glow {
-    box-shadow: 0 0 12px rgba(166, 93, 58, 0.35);
   }
 
   .success-enter {

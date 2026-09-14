@@ -36,7 +36,7 @@ const socialLinks = [
 export default function FixedCtaBar() {
   return (
     <div
-      className="fixed inset-x-0 bottom-0 z-40 border-t border-line bg-white/95 shadow-[0_-8px_30px_-18px_rgba(28,25,23,0.35)] backdrop-blur-xl"
+      className="fixed inset-x-0 bottom-0 z-40 border-t border-[#d8e7e5] bg-white/95 shadow-[0_-4px_20px_rgb(0_0_0_/5%)] backdrop-blur-xl"
       style={{ paddingBottom: 'env(safe-area-inset-bottom, 0px)' }}
     >
       <div className="page-container flex flex-col items-center gap-2 py-2 sm:gap-2.5 sm:py-2.5 lg:grid lg:h-[70px] lg:grid-cols-[1fr_minmax(0,28rem)_1fr] lg:items-center lg:gap-4 lg:py-0">
@@ -48,7 +48,7 @@ export default function FixedCtaBar() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={item.label}
-              className="inline-flex size-9 items-center justify-center rounded-full border border-line bg-white text-muted-warm transition-all duration-200 hover:border-copper/30 hover:bg-ember-soft/50 hover:text-copper focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-copper sm:size-[2.15rem]"
+              className="inline-flex size-9 items-center justify-center rounded-full border border-mint-border bg-white text-mint-text transition-all duration-200 hover:border-primary-dark hover:bg-beige hover:text-primary-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(127_214_202_/45%)] sm:size-[2.15rem]"
             >
               {item.icon}
             </a>
